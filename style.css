@@ -1,0 +1,183 @@
+:root {
+--sec-col:#ec4130;
+--sec-col-variation:#edc1bd;
+--light-font-col: #73747f;
+--middle-light-font-col: #535462;
+--middle-dark-font-col:#3c3c42; 
+--dark-font-col:black;
+--lightest-font-col: white;
+--grey-background: #eef1f4;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+* {
+        margin: 0;
+        padding:0;
+    }
+    html, body {
+        height: 100%;
+        font-weight: 300;
+        }
+
+    body {
+        line-height: 1.5;
+        font-family: poppins, raleway;
+        min-width: 265px;
+    }
+
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+    input, button, textarea, select {
+        font: inherit;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    strong{
+        font-weight: 400;
+    }
+    a {
+        text-decoration: none;
+    }
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+header {
+    padding: 1.5rem 1rem 1rem 1rem;
+    position: fixed;
+    top:0;
+    background-color: white;
+    justify-content: space-between;
+    z-index: 2;
+    width: 100%;
+    min-height: 125px;
+    
+    flex-wrap: wrap;
+}
+.logo img{
+    width: 188px;
+}
+
+@media (max-width:600px){
+    .navbar ul {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;          
+        }
+    .navbar li:nth-child(1),
+    .navbar li:nth-child(2),
+    .navbar li:nth-child(3),
+    .navbar li:nth-child(4),
+    .navbar li:nth-child(5) {
+        display: none;
+        }   
+}
+
+@media (max-width:320px){
+    .navbar li:nth-child(6) {
+        display: none;   
+        }
+  }
+
+.contact-button {
+  background-color: var(--sec-col);
+  color: var(--lightest-font-col);
+  padding: 10px 20px;
+  font-size: 9px;
+  margin-top: 10px;
+  border-radius: 3px;
+  }
+
+main {
+    position: relative;
+}
+.hero-image {
+    background-image: url("https://www.capvidia.com/hubfs/new-banner.jpg");
+    height: 300px;
+    position: absolute;
+    top:125px;
+}
+
+section.hero {
+    padding: 200px 5vw 50px 5vw;
+    background-image: url("https://www.capvidia.com/hubfs/new-banner.jpg");
+    background-size: cover;
+    background-position: left;
+    color: var(--lightest-font-col);
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    }
+.hero h2{
+    font-weight: 600;
+}
+.hero p {
+    margin-top: 1rem;    
+}
+
+.products-wrapper{
+    padding-top: 10vw;
+}
+
+.product-container {
+    background-color: var(--grey-background);
+    margin: 5vw 8vw 0 8vw;
+    padding: 8vw;
+}
+
+.product-container h4{
+    color: var(--sec-col);
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.product-image{
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.product-image h3{
+    font-weight: 600;
+    line-height: 1;
+}
+
+.product-container li::before{
+    content: url(https://www.capvidia.com/hubfs/check-icon.png);
+    width: 18px;
+    height: 18px;
+    color: var(--sec-col);
+    position: absolute;
+    left: 16vw;
+}
+
+.product-container li{
+    padding: 0 0 1rem 10vw;
+}
+
+.product-container a {
+  background-color: var(--sec-col);
+  color: var(--lightest-font-col);
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  width: max-content;
+  margin: 2rem auto 0 auto;
+  border-radius: 3px;
+}
