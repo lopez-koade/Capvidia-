@@ -1,5 +1,6 @@
 :root {
 --sec-col:#ec4130;
+--sec-col-lighter:#e8695b;  
 --sec-col-variation:#edc1bd;
 --light-font-col: #73747f;
 --middle-light-font-col: #535462;
@@ -32,8 +33,9 @@
         display: block;
         max-width: 100%;
     }
-    input, button, textarea, select {
+    input, button, textarea, select, fieldset {
         font: inherit;
+        border-style: none;
     }
     p, h1, h2, h3, h4, h5, h6 {
         overflow-wrap: break-word;
@@ -54,6 +56,10 @@
 
 .column {
     flex-direction: column;
+}
+
+.grid {
+    display: grid;
 }
 
 header {
@@ -85,12 +91,27 @@ header {
     .navbar li:nth-child(5) {
         display: none;
         }   
+    .client-image-container img:nth-child(4){
+        display: none;
+    } 
 }
 
 @media (max-width:320px){
     .navbar li:nth-child(6) {
         display: none;   
-        }
+    }
+    .client-image-container img:nth-child(3),
+    .client-image-container img:nth-child(4){
+        display: none;
+    } 
+  }
+
+  @media (max-width:450px){
+    
+    .client-image-container img:nth-child(3),
+    .client-image-container img:nth-child(4){
+        display: none;
+    } 
   }
 
 .contact-button {
@@ -168,6 +189,8 @@ section.hero {
 
 .product-container li{
     padding: 0 0 1rem 10vw;
+    color: var(--middle-light-font-col);
+    font-weight: 300   ;
 }
 
 .product-container a {
@@ -180,4 +203,281 @@ section.hero {
   width: max-content;
   margin: 2rem auto 0 auto;
   border-radius: 3px;
+}
+
+section.clients-wrapper p {
+    font-size: 28px;
+    margin: 2em 8vw 1em 8vw;
+    text-align: center;
+    font-weight: 600;
+}
+
+.client-image-container {
+    justify-content: space-evenly;    
+    margin-bottom: 8em;
+}
+/* SECTION ABOUT-WRAPPER */
+
+.about-wrapper {
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    margin: auto 8vw;
+}
+
+section.about-wrapper h4::before {
+    content: "";
+    background-image: url(https://www.capvidia.com/hubfs/Capvidia_August2018/Images/why.png);
+    background-size: 100px 100px;
+    color: var(--sec-col); 
+    position: absolute;  
+    top: -75px;
+    height: 100px;
+    width: 100px;    
+}
+
+.about-text h4 {
+    color: var(--sec-col);
+    font-size: 14PX;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+.about-text p {
+    color: var(--light-font-col);
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+.about-text a {
+  background-color: var(--sec-col);
+  color: var(--lightest-font-col);
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  width: max-content;
+  border-radius: 3px;
+  margin-bottom: 5em;
+}
+
+/* SECTION FAQ-WRAPPER */
+
+section.faq-wrapper {
+    background-color: var(--sec-col);
+    color: var(--lightest-font-col);  
+    padding: 4rem 6vw 3rem 6vw;  
+}
+
+.faq-container {
+    gap: 1rem;
+}
+
+section.faq-wrapper h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+section.faq-wrapper h2::before {
+    content: "";
+    background-image: url(	https://www.capvidia.com/hubfs/c.png);
+    background-size: 259px 316px;
+    color: var(--light-font-col); 
+    position: absolute;  
+    top: -100px;
+    left: -75px;
+    height: 316px;
+    width: 259px;      
+}
+
+.faq-container div:nth-of-type(1) {
+    background-color: white;
+    border-radius: 8px;
+    color:var(--light-font-col);
+    padding: 1rem 8vw 1rem 8vw;
+    font-weight: 300;
+    position: relative;
+}
+
+.faq-open h3 {
+    color: var(--middle-light-font-col);
+    font-size: 16px;
+    margin-bottom: 1.2rem;
+    padding-right: 10vw;
+    position: relative;
+}
+
+.faq-open p {
+    margin-bottom: 1rem;
+}
+
+.faq-open i {
+    background-color: var(--sec-col);
+    color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.faq-container div:not(.faq-open) {
+    background-color: var(--sec-col-lighter);
+    border-radius: 8px;
+    color: var(--);
+    padding: 1rem 3rem 1rem 8vw;
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+}
+
+.faq-container div:not(.faq-open) i {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    height: 25px;
+    width: 25px;
+}
+
+/* SECTION NEWS */
+
+.news {
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.news-text {
+    margin: auto 8vw;
+}
+
+.news-text h4 {
+    color: var(--sec-col);
+    font-size: 14PX;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.news-text h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+.news-text p {
+    color: var(--light-font-col);
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+.news-text a {
+  background-color: var(--sec-col);
+  color: var(--lightest-font-col);
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  width: max-content;
+  border-radius: 3px;
+  margin-bottom: 5em;
+}
+
+/* SECTION CONTACT SERVICES */
+
+section.contact-services-wrapper {
+    background-color: var(--grey-background);
+    padding: 0 4vw;
+    
+}
+
+.content-services {
+    padding: 5rem 6vw 2rem 6vw;
+    color: var(--middle-dark-font-col);
+}
+
+.content-services h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.content-services p {
+    margin-bottom: 2rem;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.building-icon-wrapper,
+.phone-icon-wrapper {
+    gap: 8vw;
+    align-items: center;    
+}
+
+.building-icon, .phone-icon {
+    margin-bottom: 2rem;
+    color: var(--sec-col);
+    border: 1.5px solid #ec4130;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    background-color: var(--sec-col);
+    color: var(--lightest-font-col); 
+    border-radius: 2px;
+    padding: 1.5rem;
+      
+}
+
+.contact-container input, 
+.contact-container textarea {
+    background-color: var(--sec-col);
+    border-bottom: 1px solid rgb(222, 135, 135);
+    width: 100%;
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder  {
+    color: white;
+}
+
+.contact-container h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;        
+}
+
+.contact-container p {
+    font-size: 14px;
+    color: var(--sec-col-variation);
+    text-align: center;
+    margin-bottom: 3rem;
 }
