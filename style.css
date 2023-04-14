@@ -1,7 +1,7 @@
 :root {
 --sec-col:#ec4130;
 --sec-col-lighter:#e8695b;  
---sec-col-variation:#edc1bd;
+--sec-col-variation:#faccc7;
 --light-font-col: #73747f;
 --middle-light-font-col: #535462;
 --middle-dark-font-col:#3c3c42; 
@@ -113,7 +113,7 @@ header {
         display: none;
     } 
   }
-
+  
 .contact-button {
   background-color: var(--sec-col);
   color: var(--lightest-font-col);
@@ -122,6 +122,10 @@ header {
   margin-top: 10px;
   border-radius: 3px;
   }
+
+.contact-button a {
+  color: white;
+}
 
 main {
     position: relative;
@@ -448,19 +452,23 @@ section.contact-services-wrapper {
     justify-content: center;
 }
 
+
+
 .contact-container {
     background-color: var(--sec-col);
     color: var(--lightest-font-col); 
-    border-radius: 2px;
-    padding: 1.5rem;
-      
+    border-radius: 2px 2px 0 0;
+    padding: 1.5rem 1.5rem 0 1.5rem;      
 }
 
-.contact-container input, 
-.contact-container textarea {
+.data-input input, 
+.data-input textarea {
     background-color: var(--sec-col);
-    border-bottom: 1px solid rgb(222, 135, 135);
+    border-bottom: 1px solid rgb(224, 147, 147);
     width: 100%;
+    line-height: 3rem;
+    padding-left: 0.5rem;
+    font-weight: 400;
 }
 
 textarea::-webkit-input-placeholder,
@@ -471,13 +479,154 @@ input::-webkit-input-placeholder  {
 .contact-container h2 {
     font-size: 40px;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;        
 }
 
-.contact-container p {
+.contact-container > p{
     font-size: 14px;
     color: var(--sec-col-variation);
     text-align: center;
     margin-bottom: 3rem;
 }
+
+.agreement p {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    color: var(--sec-col-variation);
+}
+
+.agreement label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.agreement input {
+    display: inline-block;
+}
+
+.agreement > div {
+    gap: 1.5rem;
+}
+
+.agreement > div > div {
+    gap: 1rem;
+}
+
+.agreement > input {
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    color: var(--sec-col);
+    font-size: 14px;
+    padding: 0.6rem 1.6rem;
+    border-radius: 5px;
+    font-weight: 400;
+    border: 1px solid var(--sec-col-variation);
+}
+
+.right-fix {
+    background-color: var(--sec-col);
+    margin: 0 4vw;
+    height: 50px;
+    border-radius: 0 0 2px 2px;
+}
+
+input:focus {
+    outline: none;
+    color: white;
+}
+
+/* SECTION MORE PARTNERS */
+
+section.more-partners {
+    grid-template-areas: 
+    'one two'
+    'three four'
+    'five six';
+    padding: 4rem 6vw 3rem 6vw;
+    gap: 1rem;
+}
+
+.partner-one {
+    grid-area: one;
+}
+.partner-two {
+    grid-area: two;    
+}
+.partner-three {
+    grid-area: three;    
+}
+.partner-four {
+    grid-area: four;    
+}
+.partner-five{
+    grid-area: five;    
+}
+.partner-six{
+    grid-area: six;    
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    padding: 2rem 8vw 2rem 8vw;
+    color: rgb(194, 190, 190);
+    flex-direction: column;
+    gap: 3rem  ;
+}
+
+footer a {
+    color:rgb(194, 190, 190);
+}
+
+.logo-footer > div {
+    flex-basis: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.logo-footer a {
+    width: 45px;
+    overflow: hidden;    
+}
+
+.logo-footer img {
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.logo-footer span {
+   font-size: 35px;    
+}
+
+.logo-footer p {
+    margin: 3rem 0 0 0;
+    color: var(--lightest-font-col);
+}
+
+footer li:first-of-type {
+    color: var(--lightest-font-col);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+footer li:not(:first-of-type) {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.contactus-footer li:nth-of-type(2) {
+    line-height: 1;
+}
+
+.other-links-footer {
+    margin-bottom: 4rem;
+}
+

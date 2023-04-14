@@ -23,7 +23,7 @@
                 <li>DOWNLOADS</li>
                 <li>BLOG</li>
                 <li>ABOUT US</li>
-                <li class="contact-button">CONTACT US</li>
+                <li class="contact-button"><a href="">CONTACT US</a></li>
                 <li><img width="40px" src="https://cdn2.hubspot.net/hubfs/4469455/Capvidia_August2018/Images/hamburger.png"></li>
             </ul>
         </nav>
@@ -132,74 +132,86 @@
             <div class="contact-container">
                 <h2>Get in Touch</h2>
                 <p>How may we help you?</p>
-                <form action="" method="post">
+                <form action="form-handler-here" method="post">
                     <fieldset class="data-input">
-                        <input id="" name="" type="text" placeholder="First Name *" required>
-                        <input id="" name="" type="text" placeholder="Last Name *" required>
-                        <input id="" name="" type="text" placeholder="Email *" required>
-                        <input id="" name="" type="text" placeholder="Phone Number" required>
-                        <input id="" name="" type="text" placeholder="Company *" required>
-                        <input id="" name="" type="text" placeholder="Job Title" required>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="How can we help you? *"></textarea>
+                        <input id="First-Name" name="data-input" type="text" placeholder="First Name *" required>
+                        <input id="Last-Name" name="data-input" type="text" placeholder="Last Name *" required>
+                        <input id="Email" name="data-input" type="email" placeholder="Email *" required>
+                        <input id="Phone-Number" name="data-input" type="text" placeholder="Phone Number">
+                        <input id="Company" name="data-input" type="text" placeholder="Company *" required>
+                        <input id="Job-Title" name="data-input" type="text" placeholder="Job Title">
+                        <textarea name="" id="" cols="30" rows="2" placeholder="How can we help you? *"></textarea>
                     </fieldset>
                     <fieldset class="agreement">
-                        <p>For GDPR and CCPA reasons, we need your permission to receive service & support emails.</p>
-                        <label for="support-emails"><input id="support-emails" type="checkbox" required>I agree to receive 1-to-1 Emails for Support , Service, and Inquiry from Capvidia.*</label>
-                        <label for="marketing-emails"><input id="marketing-emails" type="checkbox">I agree to receive marketing emails about educational content, promotions, and news from Capvidia. [Optional]</label>
-                        <p>By submitting, you consent to Capvidia to store and process the information to provide you content requested. You can unsubscribe from these communications at any time. </p>
-                        <input type="submit" name="submit-inquiry" id="submit-inquiry">
+                        <p><i>For GDPR and CCPA reasons, we need your permission to receive service & support emails.</i></p>
+                        <div class="flex column">
+                            <div class="flex">                            
+                              <input id="support-emails" type="checkbox" required>
+                              <label for="support-emails">I agree to receive 1-to-1 Emails for Support , Service, and Inquiry from Capvidia.*</label>
+                            </div>
+                            <div class="flex">
+                              <input id="marketing-emails" type="checkbox">
+                              <label for="marketing-emails">I agree to receive marketing emails about educational content, promotions, and news from Capvidia. [Optional]</label>
+                        </div>
+                        </div>
+                        <p><i>By submitting, you consent to Capvidia to store and process the information to provide you content requested. You can unsubscribe from these communications at any time. </i></p>
+                        <input type="submit" name="submit-inquiry" id="submit-inquiry" value="SUBMIT INQUIRY">
                     </fieldset>
                 </form>                
-            </div>
-            <div class="left-fix"></div>
-            <div class="right-fix"></div>
+            </div>            
         </section>
-        <section class="more-partners">
-            <div><a href=""><img src="" alt=""></a></div>
-            <div><a href=""><img src="" alt=""></a></div>
-            <div><a href=""><img src="" alt=""></a></div>
-            <div><a href=""><img src="" alt=""></a></div>
-            <div><a href=""><img src="" alt=""></a></div>
-            <div><a href=""><img src="" alt=""></a></div>
+        <div class="left-fix"></div>
+        <div class="right-fix"></div>
+
+        <section class="more-partners grid">
+            <div class="partner-one"><a href=""><img src="https://www.capvidia.com/hubfs/ptc-partner-logo.jpg" alt="ptc logo"></a></div>
+            <div class="partner-two"><a href=""><img src="https://www.capvidia.com/hubfs/siemens-partner-logo.jpg" alt="siemens logo"></a></div>
+            <div class="partner-three"><a href=""><img src="https://www.capvidia.com/hubfs/solidworks-partner-logo-1.jpg" alt="solidworks logo"></a></div>
+            <div class="partner-four"><a href=""><img src="https://www.capvidia.com/hubfs/mxd-partner-logo.jpg" alt="mxd logo"></a></div>
+            <div class="partner-five"><a href=""><img src="https://www.capvidia.com/hubfs/mtc-partner-logo.jpg" alt="mtc logo"></a></div>
+            <div class="partner-six"><a href=""><img src="https://www.capvidia.com/hubfs/DMSC-partner-logo.jpg" alt="dmsc logo"></a></div>
         </section>
-        <footer>
-            <div class="logo-footer">
-                <a href=""><img src="" alt=""></a>
-                <p></p>
+        
+        <footer class="flex">
+            <div class="logo-footer" id="footer">
+                <div class="flex">
+                  <a href=""><img height="40px" src="https://www.capvidia.com/hs-fs/hubfs/CAPVIDIA-logo-rgb-A.png?width=353&name=CAPVIDIA-logo-rgb-A.png" alt="logo capvidia"></a>
+                  <span>CAPVIDIA</span>
+                </div>
+                <p>© 2023 Capvidia. All rights<br> reserved.</p>
             </div>
             <div class="navigation-footer">
                 <ul>
-                    <li></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li>Navigation</li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Solutions</a></li>
+                    <li><a href="">Downloads</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
                 </ul>
             </div>
             <div class="social-footer">
                 <ul>
-                    <li></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>                    
+                    <li>Social</li>
+                    <li><a href="">Linkedin</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Youtube</a></li>                                     
                 </ul>
             </div>
             <div class="contactus-footer">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Contact Us</li>
+                    <li>1700 Post Oak Blvd<br>#600C<br>Houston, TX, 77056<br>USA</li>
+                    <li>1-832-280-8685</li>
                 </ul>
             </div>
             <div class="other-links-footer">
                 <ul>
-                    <li></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>  
+                    <li>Other Links</li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Support</a></li>  
                 </ul>
             </div>
         </footer>
