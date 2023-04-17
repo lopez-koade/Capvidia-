@@ -783,7 +783,7 @@ footer li:not(:first-of-type) {
     }
 
     .right-fix {
-        width: 50vw;
+        width: 50%;
         margin-left: auto;
     }
 
