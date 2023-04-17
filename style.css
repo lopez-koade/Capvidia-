@@ -63,7 +63,7 @@
 }
 
 header {
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     position: fixed;
     top:0;
     background-color: white;
@@ -71,14 +71,14 @@ header {
     z-index: 2;
     width: 100%;
     min-height: 125px;
-    
     flex-wrap: wrap;
+    box-shadow: 0 0 15px 0 grey;
 }
 .logo img{
     width: 188px;
 }
 
-@media (max-width:600px){
+@media (max-width:990px){
     .navbar ul {
         display: flex;
         flex-direction: column-reverse;
@@ -91,10 +91,7 @@ header {
     .navbar li:nth-child(5) {
         display: none;
         }   
-    .client-image-container img:nth-child(4){
-        display: none;
     } 
-}
 
 @media (max-width:320px){
     .navbar li:nth-child(6) {
@@ -106,10 +103,16 @@ header {
     } 
   }
 
-  @media (max-width:450px){
+  @media (max-width:500px){
     
     .client-image-container img:nth-child(3),
-    .client-image-container img:nth-child(4){
+    .client-image-container img:nth-child(4) {
+        display: none;
+    } 
+  }
+
+  @media (max-width:767px){ 
+    .client-image-container img:nth-child(4) {
         display: none;
     } 
   }
@@ -118,7 +121,7 @@ header {
   background-color: var(--sec-col);
   color: var(--lightest-font-col);
   padding: 10px 20px;
-  font-size: 9px;
+  font-size: 11px;
   margin-top: 10px;
   border-radius: 3px;
   }
@@ -129,12 +132,6 @@ header {
 
 main {
     position: relative;
-}
-.hero-image {
-    background-image: url("https://www.capvidia.com/hubfs/new-banner.jpg");
-    height: 300px;
-    position: absolute;
-    top:125px;
 }
 
 section.hero {
@@ -366,7 +363,7 @@ section.faq-wrapper h2::before {
 
 .news {
     gap: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     margin-top: 4rem;
 }
 
@@ -413,8 +410,11 @@ section.faq-wrapper h2::before {
 
 section.contact-services-wrapper {
     background-color: var(--grey-background);
-    padding: 0 4vw;
-    
+    padding: 0 4vw;    
+}
+
+.services-container {
+    max-width: 450px;
 }
 
 .content-services {
@@ -530,7 +530,7 @@ input::-webkit-input-placeholder  {
 
 .right-fix {
     background-color: var(--sec-col);
-    margin: 0 4vw;
+    margin: -1px 4vw;
     height: 50px;
     border-radius: 0 0 2px 2px;
 }
@@ -629,4 +629,240 @@ footer li:not(:first-of-type) {
 .other-links-footer {
     margin-bottom: 4rem;
 }
+
+@media (min-width:767px){
+    section.hero {
+        height: 1000px;
+        padding-top: 175px;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 55px;
+    }
+
+    section.products-wrapper {
+        display: flex;
+        flex-basis: 100%;
+        margin-top: -450px;
+    }
+
+    .product-container {
+        padding: 3vw;
+        flex-basis: 100%;
+        margin: 3vw;
+    }
+
+    .product-container li {
+        padding: 0 0 1rem 6vw;
+    }
+
+    .product-container li::before{
+        left: 0;       
+    }
+
+    section.products-wrapper ul {
+        position: relative;
+    }
+
+    .product-container .cta-button {
+        margin-top: auto;
+    }
+
+    /* SECTION ABOUT-WRAPPER */
+
+    .about-wrapper {
+        flex-direction: row; 
+        gap: 0;       
+    }
+
+    .about-text {
+        margin: auto 0 auto 4vw; 
+        flex-basis: 100%;
+        gap: 0;
+        width: 49vw;       
+    }
+
+    .about-img {
+        object-fit: contain;
+        width: 49vw;
+        flex-basis: 100%;
+    }
+
+    /* SECTION FAQ-WRAPPER */
+
+      .faq-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, auto);
+        gap: 1rem;
+      }
+    
+      .faq-container h2 {
+        grid-row: 1 / 1;
+        grid-column: 2 / 2;
+      }
+      
+      .faq-open {
+        grid-row: 1 / 7;
+        grid-column: 1 / 1;
+      }
+      
+      .faq-container div:nth-of-type(2) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 2;
+      }
+      
+      .faq-container div:nth-of-type(3) {
+        grid-row: 3 / 4;
+        grid-column: 2 / 2;
+      }
+      
+      .faq-container div:nth-of-type(4) {
+        grid-row: 4 / 5;
+        grid-column: 2 / 2;
+      }
+      
+      .faq-container div:nth-of-type(5) {
+        grid-row: 5 / 6;
+        grid-column: 2 / 2;
+      }
+      
+      .faq-container div:nth-of-type(6) {
+        grid-row: 6 / 7;
+        grid-column: 2 / 2;
+      }
+
+      /* SECTION NEWS */
+
+      .news {
+        flex-direction: row;
+        gap: 0;
+        margin-right: 4vw;
+        margin-left: 4vw;
+      }
+
+      .news-img {
+        object-fit: contain;
+        width: 47vw;
+        flex-basis: 100%;
+    }
+
+      .news-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        flex-basis: 100%;
+        gap: 0;
+        width: 47vw;       
+    }
+
+    /* SECTION CONTACT SERVICES */
+
+    .contact-services-wrapper {
+        display: flex;
+    }
+
+    .services-container {
+        width: 42vw;
+        max-width: 2000px;
+
+    }
+
+    .contact-container {
+        margin-top: 70px;
+        width: 50vw;        
+    }
+
+    .right-fix {
+        width: 50vw;
+        margin-left: auto;
+    }
+
+    .content-services {
+        padding: 15rem 6vw 2rem 3vw;
+    }
+
+    .building-icon-wrapper,
+.phone-icon-wrapper {
+    gap: 2vw;    
+    }
+
+    /* SECTION MORE PARTNERS */
+
+    section.more-partners {
+        grid-template-areas: 
+        'one two three'
+        'four five six';        
+    }
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: row;
+        padding: 2rem 4vw 2rem 4vw;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .logo-footer span {
+        font-size: 25px;    
+    }
+
+    footer li:first-of-type {        
+        font-size: 18px;        
+    }
+
+    footer li:not(:first-of-type) {
+        font-size: 14px;        
+    }
+
+    .logo-footer p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    }
+
+@media (min-width:990px){
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        gap: 2rem   ;
+    }
+    
+    .navbar li:last-of-type {
+        display: none;
+    }
+
+    .contact-button {
+        margin-top: 0;
+        padding: 18px 25px;
+        font-size: 15px;
+    }
+
+    section.more-partners {
+        grid-template-areas: 
+        'one two three four five six';
+    }
+
+    section.products-wrapper {
+        margin-top: -500px;
+    }
+    }
+
+    @media (min-width:1193px){
+        section.products-wrapper {
+            margin-top: -600px;
+        }
+    }    
 
