@@ -21,8 +21,8 @@ It's not intended to follow the original design by the pixel, but to use it as a
 
 ## Objectives
 
-Use Flexbox and Grid
-Work with variables
+Use Flexbox and Grid.
+Work with variables.
 Familiarize with git and github. Stage, commit and push through the console. Make and merge branches.
 Create .classes to be reused, keep the code as concise as possible.
 Keep the exact design of the original web page.
@@ -44,7 +44,11 @@ Keep the exact design of the original web page.
 
 ### What I learned
 
+All aspects of html and CSS were new to me, through this project and freeCodeCamp curriculum I learnt all the concepts and details required to accomplish it. 
+The main takeaways were the use of Flexbox, Grid and variables, together with the concept of designing mobile first.
 The importance of making notes through the code to help find sections when needed.
+I also learnt how to commit and push, create branches and merge them through Git Bash.
+
 
 ## Author
 
